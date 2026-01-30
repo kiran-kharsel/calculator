@@ -29,7 +29,7 @@ body{
     gap: 20px;
 }
 
-.container .result-container{
+.container .output-container{
     background-color: var(--dark-bg);
     width: 100%;
     height: fit-content;
@@ -38,7 +38,7 @@ body{
     color: var(--text-color);
 }
 
-.result-container .result-top, .result-bottom{
+.output-container .prev-operand, .current-operand{
     width: 100%;
     height: 40px;
     font-size: 1.2rem;
@@ -48,7 +48,7 @@ body{
     font-weight: bold;
 }
 
-.result-container .result-bottom{
+.output-container .current-operand{
     height: 80px;
     font-size: 3rem;
 }
