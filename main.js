@@ -17,7 +17,11 @@ let operation;
 
 
 // all clear function
-function allClear(){}
+function allClear(){
+    currentOperand = '';
+    prevOperand = '';
+    operation = undefined;
+}
 
 
 // delete function
@@ -106,4 +110,11 @@ operatorBtns.forEach((btn) => {
 equalBtn.addEventListener('click', function(){
     compute()
     updateDisplay()
+})
+
+
+allClearBtn.addEventListener('click', function(){
+    allClear()
+    updateDisplay()
+
 })
