@@ -25,7 +25,9 @@ function allClear(){
 
 
 // delete function
-function deleteNum(){}
+function deleteNum(){
+    currentOperand = currentOperand.toString().slice(0, -1)
+}
 
 
 // append number funtion
@@ -116,5 +118,10 @@ equalBtn.addEventListener('click', function(){
 allClearBtn.addEventListener('click', function(){
     allClear()
     updateDisplay()
+})
 
+
+deleteBtn.addEventListener('click', function(){
+    deleteNum()
+    updateDisplay()
 })
