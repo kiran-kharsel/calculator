@@ -35,6 +35,11 @@ function appendNum(num){
 function chooseOperation(chooseOperation){
     // prevent compute if no number passed before entering operation btn
     if(currentOperand === '') return;
+
+    // check if value preset in prevelem then compute
+    if(prevOperand !== ''){
+        compute()
+    }
     operation = chooseOperation;
     prevOperand = currentOperand
     currentOperand = '';
