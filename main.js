@@ -8,6 +8,9 @@ const equalBtn  = document.querySelector('.equal')
 const allClearBtn  = document.querySelector('.all-clear')
 const deleteBtn  = document.querySelector('.delete')
 
+
+
+
 // global variable
 let currentOperand = '';
 let prevOperand = '';
@@ -37,7 +40,7 @@ function appendNum(num){
     currentOperand = currentOperand.toString() + num.toString();
 }
 
-// chhose operation
+// choose operation
 function chooseOperation(chooseOperation){
     // prevent compute if no number passed before entering operation btn
     if(currentOperand === '') return;
@@ -89,7 +92,10 @@ function compute(){
 function updateDisplay(){
     currentOperandElement.innerText = currentOperand;
     if(prevOperand !== ''){
+        console.log(prevOperand)
         prevOperandElement.innerText = `${prevOperand} ${operation}`;
+    }else{
+        prevOperandElement.innerText = `${prevOperand}`;
     }
 }
 
