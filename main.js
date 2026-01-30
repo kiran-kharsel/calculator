@@ -73,6 +73,8 @@ function compute(){
     };
 
     currentOperand = result;
+    operation = undefined;
+    prevOperand = '';
     
 }
 
