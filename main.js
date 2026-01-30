@@ -92,7 +92,6 @@ function compute(){
 function updateDisplay(){
     currentOperandElement.innerText = currentOperand;
     if(prevOperand !== ''){
-        console.log(prevOperand)
         prevOperandElement.innerText = `${prevOperand} ${operation}`;
     }else{
         prevOperandElement.innerText = `${prevOperand}`;

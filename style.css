@@ -77,14 +77,32 @@ body{
 
 .button-container .equal, .all-clear{
     grid-column: span 2;
+    font-size: 1.6rem;
 }
 .button-container .equal{
     background-color: var(--accent-color);
     color: var(--text-color);
-    font-size: 1.6rem;
 }
 
 .button-container .delete, .all-clear{
     background-color: var(--light-bg);
     color: var(--text-color);
+}
+
+
+
+@media screen and (max-width: 600px){
+    .container{
+        width: 90%;
+        height: 600px;
+    }
+
+
+    .button-container .btn{
+        font-size: 1.8rem;
+    }
+
+    .button-container .all-clear, .button-container .delete{
+        font-size: 1rem;
+    }
 }
