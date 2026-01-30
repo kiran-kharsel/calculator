@@ -33,6 +33,8 @@ function appendNum(num){
 
 // chhose operation
 function chooseOperation(chooseOperation){
+    // prevent compute if no number passed before entering operation btn
+    if(currentOperand === '') return;
     operation = chooseOperation;
     prevOperand = currentOperand
     currentOperand = '';
@@ -63,6 +65,7 @@ function compute(){
     };
 
     currentOperand = result;
+    
 }
 
 
