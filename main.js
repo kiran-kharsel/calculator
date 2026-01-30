@@ -52,6 +52,9 @@ function compute(){
     let currentNum = Number(currentOperand)
     let result;
 
+    // check if no value present in either operand
+    if(isNaN(prevNum) || isNaN(currentNum)) return;
+
     switch(operation){
         case  '+':
             result = prevNum + currentNum;
