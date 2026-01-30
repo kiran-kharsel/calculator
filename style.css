@@ -80,6 +80,8 @@ body{
 }
 .button-container .equal{
     background-color: var(--accent-color);
+    color: var(--text-color);
+    font-size: 1.6rem;
 }
 
 .button-container .delete, .all-clear{
