@@ -88,8 +88,9 @@ function compute(){
 // update display
 function updateDisplay(){
     currentOperandElement.innerText = currentOperand;
-    prevOperandElement.innerText = prevOperand;
-    // currentOperandElement.innerText = '';
+    if(prevOperand !== ''){
+        prevOperandElement.innerText = `${prevOperand} ${operation}`;
+    }
 }
 
 
