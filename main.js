@@ -28,24 +28,49 @@ function deleteNum(){}
 function appendNum(num){
     //check for multiple decimal point
     if(num === '.' && currentOperand.includes('.')) return;
-    currentOperand = currentOperand.toString() + num;
+    currentOperand = currentOperand.toString() + num.toString();
 }
 
 // chhose operation
-function chooseOperation(operation){
-
+function chooseOperation(chooseOperation){
+    operation = chooseOperation;
+    prevOperand = currentOperand
+    currentOperand = '';
 }
 
 
 // compute
 function compute(){
+    let prevNum = Number(prevOperand)
+    let currentNum = Number(currentOperand)
+    let result;
 
+    switch(operation){
+        case  '+':
+            result = prevNum + currentNum;
+            break
+        case  '-':
+            result = prevNum - currentNum;
+            break
+        case  '*':
+            result = prevNum * currentNum;
+            break
+        case  '/':
+            result = prevNum / currentNum;
+            break
+        default:
+            return;
+    };
+
+    currentOperand = result;
 }
 
 
 // update display
 function updateDisplay(){
     currentOperandElement.innerText = currentOperand;
+    prevOperandElement.innerText = prevOperand;
+    // currentOperandElement.innerText = '';
 }
 
 
@@ -55,4 +80,17 @@ numberBtns.forEach((btn) => {
         appendNum(btn.innerText);
         updateDisplay()
     })
+})
+
+operatorBtns.forEach((btn) => {
+    btn.addEventListener('click', function(){
+        chooseOperation(btn.innerText);
+        updateDisplay()
+    })
+})
+
+
+equalBtn.addEventListener('click', function(){
+    compute()
+    updateDisplay()
 })
